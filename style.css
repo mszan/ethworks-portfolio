@@ -3,7 +3,7 @@
     src: url('fonts/Sen/Sen-Regular.ttf')
 }
 
-@keyframes zoomInOut {
+@keyframes zoomInOutArrow {
     0% {
         transform: scale(1, 1);
     }
@@ -15,8 +15,25 @@
     }
 }
 
+@keyframes pulseBackground {
+    0% {
+        background-color: #4250BF;
+    }
+    50% {
+        background-color: #253194;
+        box-shadow: 0 5px 100px #2A389D;
+    }
+    100% {
+        background-color: #4250BF;
+    }
+}
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,7 +41,20 @@ body {
     /*background-color: darkseagreen;*/
     margin: 5rem 0 0 0;
     max-width: 100vw;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
+}
+
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    /*border: 1px solid red;*/
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /* For mobile phones: */
@@ -46,6 +76,38 @@ body {
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
+
+    #navBar a {
+        margin: auto 1.5rem auto 1.5rem!important;
+    }
+
+    #landing {
+        padding: 0 2rem 0 2rem;
+    }
+
+    #landing input {
+        width: 50% !important;
+    }
+
+    #landing button {
+        width: fit-content!important;
+        transform: translateX(-50px);
+        margin-right: 30px;
+    }
+
+    #footerBottom {
+        font-size: .75rem;
+        margin: 0 20% !important;
+    }
+
+    #footerBottom > div {
+        /*height: 4rem;*/
+        width: 25% !important;
+    }
+
+    #landingBg .bgShape1 {
+        top: -420px!important;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -62,26 +124,34 @@ body {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
+    #landing {
+        padding: 0 3rem 0 3rem;
+    }
+
+    #landing h1 {
+        margin: 7rem 0 6rem 0;
+        font-size: 40px;
+    }
+
+    #landing h6 {
+        font-weight: normal;
+        font-size: 19px;
+    }
+
+    #landing img {
+        margin: 110px auto 0 auto!important;
+    }
+
+    #landingButton {
+        /*position: absolute;*/
+        transform: translateY(60%) !important
+    }
+
 }
 
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    /*border: 1px solid red;*/
-}
+#container {}
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-#container {
-    /*position: relative;*/
-    /*overflow-x: hidden;*/
-}
-
-/* Add a black background color to the top navigation */
 #navBar {
     list-style-type: none;
     position: fixed;
@@ -90,8 +160,8 @@ body {
     width: 100%;
     height: 5rem;
     margin: 0;
-    padding: 0 3rem 0 3rem;
-    /*overflow: hidden;*/
+    padding: 0 1rem 0 1rem;
+    overflow: hidden;
     top: 0;
 }
 
@@ -113,7 +183,7 @@ body {
 
 #navBar a {
     /*position: static;*/
-    margin: auto 1.5rem auto 1.5rem;
+    margin: auto .3rem auto .3rem;
 
     display: block;
     font-size: 1.2rem;
@@ -158,7 +228,7 @@ input[type=checkbox] {
 }
 
 #landing {
-    padding: 0 3rem 0 3rem;
+    padding: 0 1rem 0 1rem;
     height: 800px;
 }
 
@@ -171,7 +241,7 @@ input[type=checkbox] {
     position: absolute;
     width: 1500px;
     height: 800px;
-    top: -420px;
+    top: -160px;
     left: -290px;
     border-radius: 75px;
     background: #3947B6;
@@ -205,7 +275,7 @@ input[type=checkbox] {
 
 #landingButton {
     /*position: absolute;*/
-    transform: translateY(60%);
+    transform: translateY(-500px);
 }
 
 #landingButton a {
@@ -226,17 +296,18 @@ input[type=checkbox] {
 }
 
 #landing input {
-    width: 50%;
+    width: 100%;
+    margin-bottom: .7rem;
 }
 
 #landing button {
+    width: 100%;
+    display: inline;
     color: #FFFFFF;
     border: 0;
     background: #38A5DB;
     border-radius: 25px;
     padding: 11px 37px;
-    margin-right: 30px;
-    transform: translateX(-50px);
 }
 
 #landing button:focus {
@@ -247,13 +318,17 @@ input[type=checkbox] {
     cursor: pointer;
 }
 
+#landingButton div a {
+    animation: pulseBackground 3s infinite;
+}
+
 #landing .inputGroup {
     position: relative;
 }
 
 #landing h6 {
     font-weight: normal;
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: .5rem;
     color: #FFFFFF;
     opacity: 0.7;
@@ -261,16 +336,16 @@ input[type=checkbox] {
 
 #landing h1 {
     font-weight: bold;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 30px;
+    line-height: 45px;
     letter-spacing: .2px;
     color: #FFFFFF;
-    margin: 7rem 0 6rem 0;
+    /*margin: 1rem 0 .5rem 0;*/
 }
 
 #landing img {
     display: block;
-    margin: 3rem auto 0 auto;
+    margin: 20rem auto 0 auto;
     max-width: 90%;
     border-radius: 10px;
 }
@@ -363,7 +438,7 @@ input[type=checkbox] {
 
 #footer {
     text-align: center;
-    padding: 5rem 0 2.5rem 0;
+    padding: 4rem 0 2.5rem 0;
     background: linear-gradient(180deg, #FAFBFF 0%, #EFF1F9 41.68%, #E9ECF6 49.59%, #CED3E8 93.91%);
 }
 
@@ -396,7 +471,20 @@ input[type=checkbox] {
 }
 
 #footerBottom {
-    padding: 0 25rem;
+    font-size: .85rem;
+    /*margin: 0 20%;*/
+    margin: 0 5%;
+}
+
+#footerBottom > div {
+    height: 4rem;
+    width: 50%;
+}
+
+#footerBottom div span {
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    line-height: 2rem;
 }
 
 .formWrapper {
@@ -435,11 +523,11 @@ input[type=checkbox] {
     border-radius: 23px;
 }
 
-.divSepRight {
-    border-width: thin;
-    border-right: solid 1px #9CA4C7;
-}
+/*.divSepRight {*/
+/*    border: none;*/
+/*    padding: 0;*/
+/*}*/
 
 .fa-arrow-down {
-    animation: zoomInOut 3s infinite ;
+    animation: zoomInOutArrow 3s infinite ;
 }
