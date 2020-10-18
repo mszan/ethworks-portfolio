@@ -114,6 +114,10 @@ body {
         padding-top: 0!important;
     }
 
+    .team__member-card {
+        width: 40% !important
+    }
+
     .landing__video-thumbnail {
         top: 10px!important;
         height: 250px;
@@ -131,7 +135,6 @@ body {
     .social-side {
         top: 665px!important;
     }
-
 }
 
 @media only screen and (min-width: 769px) {
@@ -159,6 +162,10 @@ body {
 
     .team {
         padding: 0 5rem 0 5rem!important;
+    }
+
+    .team__member-card {
+        width: 25% !important
     }
 
     .landing h1 {
@@ -393,8 +400,16 @@ input[type=checkbox] {
 
 .team {
     position: relative;
-    padding: 120px 3rem 0 3rem;
+    padding: 120px 0 0 0;
     margin-bottom: 3rem;
+}
+
+.team__members {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    /*white-space: nowrap;*/
 }
 
 .team__h1 {
@@ -407,10 +422,12 @@ input[type=checkbox] {
 }
 
 .team__member-card {
+    width: 65%;
     cursor: pointer;
     display: inline-block;
     text-align: center;
     transition: .5s;
+    flex: 0 0 auto;
 }
 
 .team__member-card:hover {
