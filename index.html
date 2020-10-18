@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Dawid Mszanowski - Zadanie rekrutacyjne.</title>
+    <meta name="description" content="Zadanie rekrutacyjne.">
+    <meta name="author" content="Dawid Mszanowski">
     <meta charset="UTF-8">
+    <meta name="keywords" content="dawid, mszanowski, zadanie, rekrutacyjne">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <title></title>
 
-    <!--Main styles.-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--W3.CSS modal snippet | https://www.w3schools.com/w3css/w3css_modal.asp -->
-    <link rel="stylesheet" href="css/modal.css">
-
-    <script src="https://kit.fontawesome.com/1f366812cf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style-min.css"> <!--Main styles.-->
+    <link rel="stylesheet" href="css/modal-min.css"> <!--Modal stylesheet -->
+    <script src="https://kit.fontawesome.com/1f366812cf.js" crossorigin="anonymous"></script> <!--Font Awesome kit.-->
 </head>
 <body>
-
 <div id="container">
     <!--Main navigation bar.-->
-    <ul id="navBar">
+    <ul id="navbar" class="navbar">
         <li style="float: left"><a href="#"><img src="./img/logo.png" alt="logo"></a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#team">Team</a></li>
@@ -25,175 +23,208 @@
     </ul>
 
     <!--Landing background section.-->
-    <div id="landingBg">
-        <div class="bgShape3"></div>
-        <div class="bgShape2"></div>
-        <div class="bgShape1"></div>
+    <div id="landing-bg" class="landing-bg">
+        <div class="landing-bg__shape-3"></div>
+        <div class="landing-bg__shape-2"></div>
+        <div class="landing-bg__shape-1"></div>
     </div>
 
     <!--Landing section.-->
-    <div id="landing">
+    <div id="landing" class="landing">
+        <!--Landing face.-->
         <div class="row">
+            <!--Landing header and "Subscribe" button.-->
             <div class="col-6">
                 <h1>The first fully-automatic social crypto trading platform with real crypto currency</h1>
-                <div class="inputGroup">
-                    <h6>Subscribe and get the lastes information</h6>
-                    <input type="text" placeholder="Enter your email">
-                    <button>Subscribe</button>
+                <div class="landing__input-grp">
+                    <h6 class="landing__input-grp__h6">Subscribe and get the lastes information</h6>
+                    <label>
+                        <input class="landing__input-grp__input" type="text" placeholder="Enter your email">
+                    </label>
+                    <button class="landing__input-grp__button" aria-label="Subscribe">Subscribe</button>
                 </div>
             </div>
+
+            <!--Landing video wrapper.-->
             <div class="col-6">
-                <div class="videoThumbnail">
-                    <img id="video" class="modalListener" src="./img/playBtn.png" alt="playBtn">
+                <div class="landing__video-thumbnail">
+                    <img id="video" class="modal--listener landing__video-thumbnail__img" src="./img/play-btn.png" alt="play-btn">
                 </div>
             </div>
         </div>
-        <div class="row" id="landingButton">
+
+        <!--Landing arrow down button.-->
+        <div class="row landing__arrow-btn">
             <div class="col-12">
-                <a href="#team"><i class="fas fa-arrow-down"></i></a>
+                <a href="#team" class="landing__arrow-btn__a"><i class="fas fa-arrow-down"></i></a>
             </div>
         </div>
     </div>
 
+    <!--Fixed side social buttons.-->
+    <div id="social-side" class="social-side">
+        <a href="#">
+            <div class="social-side__button">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="social-side__button">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+
     <!--Team section.-->
-    <div class="row" id="team">
-        <h1>TEAM</h1>
+    <div id="team" class="row team">
+        <!--Team header.-->
+        <h1 class="team__h1">TEAM</h1>
+
+        <!--Team members.-->
         <div>
-            <div id="edgar" class="memberCard modalListener col-3">
-                <img src="./img/team/1.png" alt="1">
-                <h2>Edgar Morrison</h2>
-                <h3>CEO</h3>
-                <h4>Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+            <div id="edgar" class="team__member-card modal--listener col-3">
+                <img class="team__member-card__img" height="131" width="131" src="./img/team/1.png" alt="1">
+                <h2 class="team__member-card__h2">Edgar Morrison</h2>
+                <h3 class="team__member-card__h3">CEO</h3>
+                <h4 class="team__member-card__h4">Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
+                <div class="team__member-social">
+                    <button class="team__member-social__button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="team__member-social__button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
-            <div id="mae" class="memberCard modalListener col-3">
-                <img src="./img/team/2.png" alt="1">
-                <h2>Mae Martin</h2>
-                <h3>CTO</h3>
-                <h4>Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+            <div id="mae" class="team__member-card modal--listener col-3">
+                <img class="team__member-card__img" height="131" width="131" src="./img/team/2.png" alt="1">
+                <h2 class="team__member-card__h2">Mae Martin</h2>
+                <h3 class="team__member-card__h3">CTO</h3>
+                <h4 class="team__member-card__h4">Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
+                <div class="team__member-social">
+                    <button class="team__member-social__button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="team__member-social__button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
-            <div id="david" class="memberCard modalListener col-3">
-                <img src="./img/team/3.png" alt="1">
-                <h2>David Banks</h2>
-                <h3>CFO</h3>
-                <h4>Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+            <div id="david" class="team__member-card modal--listener col-3">
+                <img class="team__member-card__img" height="131" width="131" src="./img/team/3.png" alt="1">
+                <h2 class="team__member-card__h2">David Banks</h2>
+                <h3 class="team__member-card__h3">CFO</h3>
+                <h4 class="team__member-card__h4">Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
+                <div class="team__member-social">
+                    <button class="team__member-social__button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="team__member-social__button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
-            <div id="frederick" class="memberCard modalListener col-3">
-                <img src="./img/team/4.png" alt="1">
-                <h2>Frederick Parsons</h2>
-                <h3>COO</h3>
-                <h4>Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+            <div id="frederick" class="team__member-card modal--listener col-3">
+                <img class="team__member-card__img" height="131" width="131" src="./img/team/4.png" alt="1">
+                <h2 class="team__member-card__h2">Frederick Parsons</h2>
+                <h3 class="team__member-card__h3">COO</h3>
+                <h4 class="team__member-card__h4">Having used discount toner cartridges for twenty years, there have been a lot of changes in the toner...</h4>
+                <div class="team__member-social">
+                    <button class="team__member-social__button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="team__member-social__button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
     <!--Modals.-->
-    <div class="row" id="modals">
+    <div id="modals" class="row modals">
+        <!--Team members modals.-->
         <div id="edgar-modal" class="w3-modal w3-animate-opacity">
             <div class="w3-modal-content">
                 <div class="w3-modal-close-btn">
                     <i class="far fa-times-circle"></i>
                 </div>
-                <h2>Edgar Morrison</h2>
-                <h3>CEO</h3>
+                <h2 class="modal__h2">Edgar Morrison</h2>
+                <h3 class="modal__h3">CEO</h3>
                 <div class="w3-modal-body">
-                    <h4>Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
+                    <h4 class="modal__h4">Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
                 </div>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+                <div class="modal__member-social">
+                    <button class="modal__social-button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="modal__social-button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
         </div>
-
         <div id="mae-modal" class="w3-modal w3-animate-opacity">
             <div class="w3-modal-content">
                 <div class="w3-modal-close-btn">
                     <i class="far fa-times-circle"></i>
                 </div>
-                <h2>Mae Martin</h2>
-                <h3>CTO</h3>
+                <h2 class="modal__h2">Mae Martin</h2>
+                <h3 class="modal__h3">CTO</h3>
                 <div class="w3-modal-body">
-                    <h4>Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
+                    <h4 class="modal__h4">Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
                 </div>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+                <div class="modal__member-social">
+                    <button class="modal__social-button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="modal__social-button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
         </div>
-
         <div id="david-modal" class="w3-modal w3-animate-opacity">
             <div class="w3-modal-content">
                 <div class="w3-modal-close-btn">
                     <i class="far fa-times-circle"></i>
                 </div>
-                <h2>David Banks</h2>
-                <h3>CFO</h3>
+                <h2 class="modal__h2">David Banks</h2>
+                <h3 class="modal__h3">CFO</h3>
                 <div class="w3-modal-body">
-                    <h4>Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
+                    <h4 class="modal__h4">Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
                 </div>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+                <div class="modal__member-social">
+                    <button class="modal__social-button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="modal__social-button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
         </div>
-
         <div id="frederick-modal" class="w3-modal w3-animate-opacity">
             <div class="w3-modal-content">
                 <div class="w3-modal-close-btn">
                     <i class="far fa-times-circle"></i>
                 </div>
-                <h2>Frederick Parsons</h2>
-                <h3>COO</h3>
+                <h2 class="modal__h2">Frederick Parsons</h2>
+                <h3 class="modal__h3">COO</h3>
                 <div class="w3-modal-body">
-                    <h4>Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
+                    <h4 class="modal__h4">Urna neque viverra justo nec. Venenatis tellus in metus vulputate. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Auctor neque vitae tempus quam pellentesque nec. Auctor neque vitae tempus quam pellentesque. Quam adipiscing vitae proin sagittis. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Amet mauris commodo quis imperdiet. Felis eget velit aliquet sagittis id. Netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. Dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Ut tellus elementum sagittis vitae. Egestas congue quisque egestas diam. Scelerisque in dictum non consectetur a erat nam at. Nisi quis eleifend quam adipiscing vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Enim facilisis gravida neque convallis a. Mauris vitae ultricies leo integer malesuada. Sed pulvinar proin gravida hendrerit lectus a. Venenatis cras sed felis eget velit aliquet. Quis risus sed vulputate odio ut enim blandit volutpat. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Euismod lacinia at quis risus sed vulputate odio. Ultricies lacus sed turpis tincidunt id aliquet. Aenean pharetra magna ac placerat vestibulum lectus. Dui ut ornare lectus sit amet est placerat in. Ultrices gravida dictum fusce ut placerat orci. Nullam vehicula ipsum a arcu cursus. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Morbi enim nunc faucibus a. Elementum facilisis leo vel fringilla est ullamcorper eget. Urna molestie at elementum eu facilisis sed. Diam quis enim lobortis scelerisque. Varius vel pharetra vel turpis nunc eget lorem. Ut etiam sit amet nisl purus in. In hac habitasse platea dictumst quisque sagittis purus.</h4>
                 </div>
-                <div class="memberSocial">
-                    <button><i class="fab fa-facebook-f"></i></button>
-                    <button><i class="fab fa-linkedin-in"></i></button>
+                <div class="modal__member-social">
+                    <button class="modal__social-button" aria-label="Facebook Button"><i class="fab fa-facebook-f"></i></button>
+                    <button class="modal__social-button" aria-label="LinkedIn Button"><i class="fab fa-linkedin-in"></i></button>
                 </div>
             </div>
         </div>
 
+        <!--Landing video modal.-->
         <div id="video-modal" class="w3-modal w3-animate-opacity">
-            <div class="w3-modal-content">
+            <div class="w3-modal-content" style="padding-bottom: 2rem;">
                 <div class="w3-modal-close-btn">
                     <i class="far fa-times-circle"></i>
                 </div>
-                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/LcF6ut-1M94" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <video width="400" controls>
+                    <source src="./video/sample.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>
 
     <!--Contact section.-->
-    <div class="row" id="contact">
-        <h1>Contact Us</h1>
-        <h2>Most calendars are designed for teams.<br>Slate is designed for freelancers</h2>
-        <div class="formWrapper">
+    <div id="contact" class="row contact">
+        <!--Contact header.-->
+        <h1 class="contact__h1">Contact Us</h1>
+        <h2 class="contact__h2">Most calendars are designed for teams.<br>Slate is designed for freelancers</h2>
+
+        <!--Contact form.-->
+        <div class="contact__form">
             <form>
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email">
-                <div class="checkboxWrapper">
-                    <input type="checkbox" id="contactCheckbox"><label for="contactCheckbox">Checkbox</label>
+                <label>
+                    <input type="text" placeholder="Your Name">
+                </label>
+                <label>
+                    <input type="text" placeholder="Your Email">
+                </label>
+                <div class="contact__form__checkbox">
+                    <input type="checkbox" id="checkbox" class="form__checkbox-input"><label for="checkbox">Checkbox</label>
                 </div>
-                <div class="submitWrapper">
+                <div class="contact__form__submit">
                     <input type="submit" value="Send">
                 </div>
             </form>
@@ -201,42 +232,41 @@
     </div>
 
     <!--Footer section.-->
-    <div id="footer">
-        <div class="row" id="footerTop">
+    <div id="footer" class="footer">
+        <div class="row footer__top">
             <div class="col-4">
                 <img src="./img/logo.png" alt="logo">
             </div>
             <div class="col-4">
-                <h3>Contact us:</h3>
-                <a href="mailto:have@nicecoding.io">have@nicecoding.io</a>
+                <h3 class="footer__h3">Contact us:</h3>
+                <a class="footer__a" href="mailto:have@nicecoding.io">have@nicecoding.io</a>
             </div>
             <div class="col-4">
-                <button>Read Whitepaper</button>
+                <button class="footer__button" aria-label="Read Whitepaper">Read Whitepaper</button>
             </div>
         </div>
-        <div class="row" id="footerBottom">
-            <div class="col-3">
-                <span>© Copywriters  2020</span>
+        <div class="row footer_bottom">
+            <div class="col-3 footer__bottom--sep-right">
+                <span class="footer_span">© Copywriters  2020</span>
+            </div>
+            <div class="col-3 footer__bottom--sep-right">
+                <span class="footer_span">FAQ</span>
+            </div>
+            <div class="col-3 footer__bottom--sep-right">
+                <span class="footer_span">Terms of Use</span>
             </div>
             <div class="col-3">
-                <span>FAQ</span>
-            </div>
-            <div class="col-3">
-                <span>Terms of Use</span>
-            </div>
-            <div class="col-3">
-                <span>Privacy Policy</span>
+                <span class="footer_span">Privacy Policy</span>
             </div>
         </div>
     </div>
 </div>
-
 <script>
-    // Get all member cards and loop through to add event listeners for each one.
-    document.querySelectorAll('.modalListener').forEach(item => {
+    // Get all elements with 'modal--listener' class and loop through to add event listeners for each one.
+    document.querySelectorAll('.modal--listener').forEach(item => {
         item.addEventListener('click', function() {
 
-            // Get associated user modal.
+            // Get associated modal.
             const modal = document.getElementById(`${this.id}-modal`);
 
             // Show associated modal.

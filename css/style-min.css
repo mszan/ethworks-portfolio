@@ -34,14 +34,13 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     font-family: Sen, sans-serif;
-    /*background-color: darkseagreen;*/
     margin: 5rem 0 0 0;
     max-width: 100vw;
-    /*overflow-x: hidden;*/
 }
 
 
@@ -77,55 +76,60 @@ body {
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 
-    #navBar a {
+    .navbar a {
         margin: auto 1.5rem auto 1.5rem!important;
     }
 
-    #landing {
+    .landing {
         padding: 0 2rem 0 2rem;
     }
 
-    #landing input {
+    .landing__input-grp__input {
         width: 100% !important;
     }
 
-    #landing button {
+    .landing__input-grp__button {
         width: 100%;
-        /*width: fit-content!important;*/
     }
 
-    #landingButton {
+    .landing__arrow-btn {
         position: relative;
         top: 30px!important;
     }
 
-    #footerBottom {
+    .footer_bottom {
         font-size: .75rem;
-        margin: 0 20% !important;
+        margin: 0 8% !important;
     }
 
-    #footerBottom > div {
-        /*height: 4rem;*/
+    .footer_bottom > div {
         width: 25% !important;
     }
 
-    #landingBg .bgShape1 {
+    .landing-bg__shape-1 {
         top: -420px!important;
     }
 
-    #team {
+    .team {
         padding-top: 0!important;
     }
 
-    .videoThumbnail {
-        /*position: absolute!important;*/
+    .landing__video-thumbnail {
         top: 10px!important;
         height: 250px;
     }
 
-    .videoThumbnail > img {
+    .landing__video-thumbnail__img {
         position: relative;
         top: 60px!important;
+    }
+
+    .footer__bottom--sep-right {
+        border-right: 1px solid #d0d0d0;
+    }
+
+    .social-side {
+        top: 665px!important;
     }
 
 }
@@ -145,54 +149,54 @@ body {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
-    #landing {
+    .landing {
         padding: 0 5rem 0 5rem!important;
     }
 
-    #navBar {
+    .navbar {
         padding: 0 5rem 0 5rem!important;
     }
 
-    #team {
+    .team {
         padding: 0 5rem 0 5rem!important;
     }
 
-    #landing h1 {
+    .landing h1 {
         margin: 7rem 0 6rem 0;
         font-size: 40px;
     }
 
-    #landing h6 {
+    .landing__input-grp__h6 {
         font-weight: normal;
         font-size: 19px;
     }
 
-    #landing input {
+    .landing__input-grp__input {
         width: 50% !important;
     }
 
-    #landing button {
+    .landing__input-grp__button {
         width: fit-content!important;
         transform: translateX(-50%);
     }
 
-    .videoThumbnail {
+    .landing__video-thumbnail {
         top: 120px!important;
         height: 300px;
     }
 
-    #landingButton {
-        /*position: relative!important;*/
+    .landing__arrow-btn {
         top: 125px!important;
-        /*position: absolute;*/
-        /*transform: translateY(60%) !important*/
     }
 
+    .footer_bottom {
+        margin: 0 15% !important;
+    }
 }
 
-#container {}
+.container {}
 
-#navBar {
+.navbar {
     list-style-type: none;
     position: fixed;
     z-index: 5;
@@ -205,23 +209,22 @@ body {
     top: 0;
 }
 
-#navBar li {
+.navbar li {
     margin: 1.8rem .1rem auto .1rem;
     float: right;
 }
 
-#navBar li img {
+.navbar li img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
-#navBar .active {
+.navbar .active {
     border-bottom: 1px solid #5454D4;
-    /*TODO: Make it border bottom.*/
 }
 
-#navBar a {
+.navbar a {
     padding: .5rem;
     font-size: 1.2rem;
     text-decoration: none;
@@ -250,8 +253,6 @@ input[type=checkbox] {
     border-radius: 4px;
     margin: .5rem;
     outline: none !important;
-    /*TOOD: Remove border if possible.*/
-
     -ms-transform: scale(1.25); /* IE */
     -moz-transform: scale(1.25); /* FF */
     -webkit-transform: scale(1.25); /* Safari and Chrome */
@@ -259,21 +260,17 @@ input[type=checkbox] {
     transform: scale(1.25);
 }
 
-.landingBgWrapper {
-    position: absolute;
-}
-
-#landing {
+.landing {
     padding: 0 1rem 0 1rem;
     height: 800px;
 }
 
-#landingBg {
+.landing-bg {
     z-index: -1;
     position: absolute;
 }
 
-#landingBg .bgShape1 {
+.landing-bg .landing-bg__shape-1 {
     position: absolute;
     width: 1500px;
     height: 800px;
@@ -285,7 +282,7 @@ input[type=checkbox] {
     transform: rotate(13deg);
 }
 
-#landingBg .bgShape2 {
+.landing-bg .landing-bg__shape-2 {
     position: absolute;
     width: 1500px;
     height: 800px;
@@ -297,7 +294,7 @@ input[type=checkbox] {
     transform: rotate(13deg);
 }
 
-#landingBg .bgShape3 {
+.landing-bg .landing-bg__shape-3 {
     position: absolute;
     width: 1263px;
     height: 1100px;
@@ -309,19 +306,19 @@ input[type=checkbox] {
     transform:matrix(-1.66,1.12,-2.69,-0.60,-55,100);
 }
 
-#landingButton {
+.landing__arrow-btn {
     position: relative;
     top: -160px;
 }
 
-#landingButton a {
+.landing__arrow-btn__a {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 60px;
     height: 60px;
     line-height: 60px;
-    color: #E7E7E7;
+    color: #E7E7E7!important;
     border: 1px solid #E7E7E7;
     border-radius: 50%;
     font-size: 15px;
@@ -329,14 +326,15 @@ input[type=checkbox] {
     text-align: center;
     text-decoration: none;
     background: none;
+    animation: pulseBackground 3s infinite;
 }
 
-#landing input {
+.landing__input-grp__input {
     width: 100%;
     margin-bottom: .7rem;
 }
 
-#landing button {
+.landing__input-grp__button {
     width: 100%;
     display: inline;
     color: #FFFFFF;
@@ -344,25 +342,24 @@ input[type=checkbox] {
     background: #38A5DB;
     border-radius: 25px;
     padding: 11px 37px;
+    transition: .3s;
 }
 
-#landing button:focus {
+.landing__input-grp__button:focus {
     outline: none !important;
 }
 
-#landing button:hover {
+.landing__input-grp__button:hover {
     cursor: pointer;
+    background-color: #263396;
+    box-shadow: 0 5px 100px #263396;
 }
 
-#landingButton div a {
-    animation: pulseBackground 3s infinite;
-}
-
-#landing .inputGroup {
+.landing__input-grp {
     position: relative;
 }
 
-#landing h6 {
+.landing__input-grp__h6 {
     font-weight: normal;
     font-size: 14px;
     margin-bottom: .5rem;
@@ -370,16 +367,15 @@ input[type=checkbox] {
     opacity: 0.7;
 }
 
-#landing h1 {
+.landing h1 {
     font-weight: bold;
     font-size: 30px;
     line-height: 45px;
-    letter-spacing: .2px;
+    letter-spacing: 1px;
     color: #FFFFFF;
-    /*margin: 1rem 0 .5rem 0;*/
 }
 
-.videoThumbnail {
+.landing__video-thumbnail {
     z-index: 2;
     position: relative;
     top: 300px;
@@ -389,19 +385,19 @@ input[type=checkbox] {
     border-radius: 10px;
 }
 
-.videoThumbnail > img {
+.landing__video-thumbnail__img {
     cursor: pointer;
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
-#team {
+.team {
     position: relative;
     padding: 120px 3rem 0 3rem;
     margin-bottom: 3rem;
 }
 
-#team h1 {
+.team__h1 {
     text-align: center;
     color: #1C1F83;
     font-size: 16px;
@@ -410,36 +406,41 @@ input[type=checkbox] {
     text-transform: uppercase;
 }
 
-.memberCard {
+.team__member-card {
     cursor: pointer;
     display: inline-block;
     text-align: center;
+    transition: .5s;
 }
 
-.memberCard img {
+.team__member-card:hover {
+    opacity: .5;
+}
+
+.team__member-card__img {
     border-radius: 50%;
     height: 131px;
     width: 131px;
 }
 
-.memberCard h2 {
+.team__member-card__h2 {
     color: #38A5DB;
     font-size: 1.25rem;
     line-height: 34px;
     margin-bottom: 0.15rem;
 }
 
-.memberCard h3 {
+.team__member-card__h3 {
     margin: 0;
     font-size: 13px;
     line-height: 18px;
-    letter-spacing: 0.26px;
+    letter-spacing: 1px;
     color: #011226;
     mix-blend-mode: normal;
     opacity: 0.5;
 }
 
-.memberCard h4 {
+.team__member-card__h4 {
     margin-top: 0.15rem;
     font-style: normal;
     font-weight: normal;
@@ -448,7 +449,7 @@ input[type=checkbox] {
     color: #45515F;
 }
 
-.memberSocial > button {
+.team__member-social__button {
     padding: .2rem;
     width: 2rem;
     mix-blend-mode: normal;
@@ -457,14 +458,14 @@ input[type=checkbox] {
     border-radius: 3px;
 }
 
-#contact {
+.contact {
     padding-top: 5rem;
     text-align: center;
     height: 600px;
     background-color: #252B42;
 }
 
-#contact h1 {
+.contact__h1 {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -475,7 +476,7 @@ input[type=checkbox] {
     color: #FFFFFF;
 }
 
-#contact h2 {
+.contact__h2 {
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
@@ -483,26 +484,31 @@ input[type=checkbox] {
     margin: 2rem 0 2rem 0;
 }
 
-#footer {
+.footer {
     text-align: center;
     padding: 4rem 0 2.5rem 0;
     background: linear-gradient(180deg, #FAFBFF 0%, #EFF1F9 41.68%, #E9ECF6 49.59%, #CED3E8 93.91%);
 }
 
-#footer a, a:visited, a:hover, a:active {
+.footer__a,
+.footer__a:visited,
+.footer__a:hover,
+.footer__a:active {
     color: #0F81FF;
 }
 
-#footer h3 {
+.footer__h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
-#footer h3, span {
+.footer__h3,
+.footer_span {
     color: #263396;
+    line-height: 2rem;
 }
 
-#footer button {
+.footer__button {
     font-size: 1rem;
     background: #38A5DB;
     box-shadow: 0 12px 44px rgba(56, 165, 219, 0.6);
@@ -511,65 +517,93 @@ input[type=checkbox] {
     outline: none !important;
     padding: 11px 15px;
     color: white;
+    transition: .3s;
 }
 
-#footerTop {
+.footer__button:hover {
+    background-color: #263396;
+    box-shadow: 0 5px 100px #263396;
+}
+
+.footer__top {
     margin-bottom: 2rem;
 }
 
-#footerBottom {
+.footer_bottom {
     font-size: .85rem;
-    /*margin: 0 20%;*/
     margin: 0 5%;
 }
 
-#footerBottom > div {
+.footer_bottom > div {
     height: 4rem;
     width: 50%;
 }
-
-#footerBottom div span {
-    /*display: inline-block;*/
-    /*vertical-align: middle;*/
-    line-height: 2rem;
-}
-
-.formWrapper {
+.contact__form {
     color: #FFFFFF;
     padding: 3rem 2rem 2rem 2rem;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
-    /*height: 370px;*/
-
     background: #4250BF;
     border-radius: 13px;
-    /*margin: 0 8px;*/
 }
 
-.formWrapper input[type=text] {
+.contact__form input[type=text] {
     margin-bottom: 1.5rem;
     width:100%;
 }
 
-.formWrapper .checkboxWrapper {
+.contact__form .contact__form__checkbox {
     text-align: left;
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.formWrapper .submitWrapper {
+.contact__form .contact__form__submit {
     text-align: left;
     width: 100%;
 }
 
-.formWrapper input[type=submit] {
+.contact__form input[type=submit] {
+    color: #FFFFFF;
     background: #38A5DB;
     box-shadow: 0 12px 44px rgba(56, 165, 219, 0.6);
     border-radius: 23px;
+    transition: .3s;
+}
+
+.contact__form input[type=submit]:hover {
+    background-color: #263396;
+    box-shadow: 0 5px 100px #263396;
 }
 
 .fa-arrow-down {
     animation: zoomInOutArrow 3s infinite ;
+}
+
+.social-side {
+    z-index: 4;
+    top: 540px;
+    right: 20px;
+    position: fixed;
+    font-size: 1.35rem;
+}
+
+.social-side__button {
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    margin-bottom: .5rem;
+    text-align: center;
+    background-color: #63C7FF;
+    border-radius: 50%;
+    box-shadow: 0 5px 100px #38A5DB;
+    transition: 0.2s;
+}
+
+.social-side__button:hover {
+    background-color: #4250BF;
+    box-shadow: 0 5px 100px #263396;
 }
