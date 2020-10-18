@@ -8,18 +8,19 @@
     <meta name="keywords" content="dawid, mszanowski, zadanie, rekrutacyjne">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <link rel="stylesheet" href="css/style-min.css"> <!--Main styles.-->
-    <link rel="stylesheet" href="css/modal-min.css"> <!--Modal stylesheet -->
+    <link rel="stylesheet" href="css/style.css"> <!--Main styles.-->
+    <link rel="stylesheet" href="css/modal.css"> <!--Modal stylesheet -->
     <script src="https://kit.fontawesome.com/1f366812cf.js" crossorigin="anonymous"></script> <!--Font Awesome kit.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id="container">
     <!--Main navigation bar.-->
     <ul id="navbar" class="navbar">
         <li style="float: left"><a href="#"><img src="./img/logo.png" alt="logo"></a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a class="active" href="#">ICO</a></li>
+        <li><a id="navbar__contact" href="#contact">Contact</a></li>
+        <li><a id="navbar__team" href="#team">Team</a></li>
+        <li><a id="navbar__ico" class="active" href="#">ICO</a></li>
     </ul>
 
     <!--Landing background section.-->
@@ -261,6 +262,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="./js/modal.js"></script>
+<script type="text/javascript" src="./js/modal.js"></script> <!--Custom modal.-->
+<script type="text/javascript" src="./js/scroll.js"></script> <!--Handles 'active' navbar class assignment during scroll.-->
 </body>
 </html>
