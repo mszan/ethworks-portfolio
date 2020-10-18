@@ -1,6 +1,6 @@
 @font-face {
     font-family: Sen;
-    src: url('fonts/Sen/Sen-Regular.ttf')
+    src: url('../fonts/Sen/Sen-Regular.ttf')
 }
 
 @keyframes zoomInOutArrow {
@@ -20,8 +20,8 @@
         background-color: #4250BF;
     }
     50% {
-        background-color: #253194;
-        box-shadow: 0 5px 100px #2A389D;
+        background-color: #38A5DB;
+        box-shadow: 0 5px 100px #38A5DB;
     }
     100% {
         background-color: #4250BF;
@@ -86,13 +86,17 @@ body {
     }
 
     #landing input {
-        width: 50% !important;
+        width: 100% !important;
     }
 
     #landing button {
-        width: fit-content!important;
-        transform: translateX(-50px);
-        margin-right: 30px;
+        width: 100%;
+        /*width: fit-content!important;*/
+    }
+
+    #landingButton {
+        position: relative;
+        top: 30px!important;
     }
 
     #footerBottom {
@@ -108,9 +112,25 @@ body {
     #landingBg .bgShape1 {
         top: -420px!important;
     }
+
+    #team {
+        padding-top: 0!important;
+    }
+
+    .videoThumbnail {
+        /*position: absolute!important;*/
+        top: 10px!important;
+        height: 250px;
+    }
+
+    .videoThumbnail > img {
+        position: relative;
+        top: 60px!important;
+    }
+
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -126,7 +146,15 @@ body {
     .col-12 {width: 100%;}
 
     #landing {
-        padding: 0 3rem 0 3rem;
+        padding: 0 5rem 0 5rem!important;
+    }
+
+    #navBar {
+        padding: 0 5rem 0 5rem!important;
+    }
+
+    #team {
+        padding: 0 5rem 0 5rem!important;
     }
 
     #landing h1 {
@@ -139,13 +167,25 @@ body {
         font-size: 19px;
     }
 
-    #landing img {
-        margin: 110px auto 0 auto!important;
+    #landing input {
+        width: 50% !important;
+    }
+
+    #landing button {
+        width: fit-content!important;
+        transform: translateX(-50%);
+    }
+
+    .videoThumbnail {
+        top: 120px!important;
+        height: 300px;
     }
 
     #landingButton {
+        /*position: relative!important;*/
+        top: 125px!important;
         /*position: absolute;*/
-        transform: translateY(60%) !important
+        /*transform: translateY(60%) !important*/
     }
 
 }
@@ -155,7 +195,7 @@ body {
 #navBar {
     list-style-type: none;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     background-color: #FFFFFF;
     width: 100%;
     height: 5rem;
@@ -166,7 +206,7 @@ body {
 }
 
 #navBar li {
-    display: inline;
+    margin: 1.8rem .1rem auto .1rem;
     float: right;
 }
 
@@ -177,18 +217,14 @@ body {
 }
 
 #navBar .active {
-    text-decoration: underline;
+    border-bottom: 1px solid #5454D4;
     /*TODO: Make it border bottom.*/
 }
 
 #navBar a {
-    /*position: static;*/
-    margin: auto .3rem auto .3rem;
-
-    display: block;
+    padding: .5rem;
     font-size: 1.2rem;
     text-decoration: none;
-    line-height: 5rem;
     color: #1C2085;
 
 }
@@ -274,8 +310,8 @@ input[type=checkbox] {
 }
 
 #landingButton {
-    /*position: absolute;*/
-    transform: translateY(-500px);
+    position: relative;
+    top: -160px;
 }
 
 #landingButton a {
@@ -343,15 +379,25 @@ input[type=checkbox] {
     /*margin: 1rem 0 .5rem 0;*/
 }
 
-#landing img {
-    display: block;
-    margin: 20rem auto 0 auto;
-    max-width: 90%;
+.videoThumbnail {
+    z-index: 2;
+    position: relative;
+    top: 300px;
+    background-image: url("../img/video_thumbnail.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 10px;
 }
 
+.videoThumbnail > img {
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
 #team {
-    padding: 0 3rem 0 3rem;
+    position: relative;
+    padding: 120px 3rem 0 3rem;
     margin-bottom: 3rem;
 }
 
@@ -365,6 +411,7 @@ input[type=checkbox] {
 }
 
 .memberCard {
+    cursor: pointer;
     display: inline-block;
     text-align: center;
 }
@@ -401,7 +448,7 @@ input[type=checkbox] {
     color: #45515F;
 }
 
-.memberCard button {
+.memberSocial > button {
     padding: .2rem;
     width: 2rem;
     mix-blend-mode: normal;
@@ -522,11 +569,6 @@ input[type=checkbox] {
     box-shadow: 0 12px 44px rgba(56, 165, 219, 0.6);
     border-radius: 23px;
 }
-
-/*.divSepRight {*/
-/*    border: none;*/
-/*    padding: 0;*/
-/*}*/
 
 .fa-arrow-down {
     animation: zoomInOutArrow 3s infinite ;
