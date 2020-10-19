@@ -264,6 +264,7 @@ input::placeholder {
 }
 
 input[type=checkbox] {
+    cursor: pointer;
     border-radius: 4px;
     margin: .5rem;
     outline: none !important;
@@ -584,18 +585,19 @@ input[type=checkbox] {
     width:100%;
 }
 
-.contact__form .contact__form__checkbox {
+.contact__form__checkbox {
     text-align: left;
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.contact__form .contact__form__submit {
+.contact__form__submit {
     text-align: left;
     width: 100%;
 }
 
 .contact__form input[type=submit] {
+    cursor: pointer;
     color: #FFFFFF;
     background: #38A5DB;
     box-shadow: 0 12px 44px rgba(56, 165, 219, 0.6);
