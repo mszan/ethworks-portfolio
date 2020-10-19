@@ -281,7 +281,7 @@ input[type=checkbox] {
 }
 
 .landing-bg {
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     z-index: -1;
     position: absolute;
